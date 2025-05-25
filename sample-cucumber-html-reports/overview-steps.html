@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>SauceDemo</td>
+        <td>1</td>
+      <td>25 May 2025, 17:11</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.sauce.steps.Hooks.end(io.cucumber.java.Scenario)</td>
+              <td>5</td>
+              <td class="duration" data-value="823071960">0.823</td>
+              <td class="duration" data-value="823071960">0.944</td>
+              <td class="duration" data-value="4115359800">4.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.Hooks.start()</td>
+              <td>5</td>
+              <td class="duration" data-value="3817306000">3.817</td>
+              <td class="duration" data-value="3817306000">4.194</td>
+              <td class="duration" data-value="19086530000">19.086</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.the_user_clicks_on_the_log_in_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="282021850">0.282</td>
+              <td class="duration" data-value="282021850">0.297</td>
+              <td class="duration" data-value="564043700">0.564</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.the_user_clicks_on_the_log_in_button1()</td>
+              <td>1</td>
+              <td class="duration" data-value="272973500">0.272</td>
+              <td class="duration" data-value="272973500">0.272</td>
+              <td class="duration" data-value="272973500">0.272</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.the_user_did_not_enter_a_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="29812000">0.029</td>
+              <td class="duration" data-value="29812000">0.029</td>
+              <td class="duration" data-value="29812000">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.the_user_did_not_enter_a_username()</td>
+              <td>1</td>
+              <td class="duration" data-value="77079100">0.077</td>
+              <td class="duration" data-value="77079100">0.077</td>
+              <td class="duration" data-value="77079100">0.077</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.the_user_enters_a_invalid_password()</td>
+              <td>1</td>
+              <td class="duration" data-value="44539800">0.044</td>
+              <td class="duration" data-value="44539800">0.044</td>
+              <td class="duration" data-value="44539800">0.044</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.the_user_enters_a_valid_password()</td>
+              <td>2</td>
+              <td class="duration" data-value="47857950">0.047</td>
+              <td class="duration" data-value="47857950">0.058</td>
+              <td class="duration" data-value="95715900">0.095</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.the_user_enters_a_valid_username()</td>
+              <td>3</td>
+              <td class="duration" data-value="114471466">0.114</td>
+              <td class="duration" data-value="114471466">0.120</td>
+              <td class="duration" data-value="343414400">0.343</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.the_user_navigates_to_the_home_page()</td>
+              <td>5</td>
+              <td class="duration" data-value="426280">0.000</td>
+              <td class="duration" data-value="426280">0.001</td>
+              <td class="duration" data-value="2131400">0.002</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.user_clicks_on_the_log_in_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="255811600">0.255</td>
+              <td class="duration" data-value="255811600">0.255</td>
+              <td class="duration" data-value="255811600">0.255</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.validate_that_a_message_for_an_incorrect_username_or_password_is_displayed()</td>
+              <td>1</td>
+              <td class="duration" data-value="14422100">0.014</td>
+              <td class="duration" data-value="14422100">0.014</td>
+              <td class="duration" data-value="14422100">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.validate_that_the_password_field_is_empty()</td>
+              <td>1</td>
+              <td class="duration" data-value="13108900">0.013</td>
+              <td class="duration" data-value="13108900">0.013</td>
+              <td class="duration" data-value="13108900">0.013</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.validate_that_the_username_field_is_empty()</td>
+              <td>1</td>
+              <td class="duration" data-value="14346100">0.014</td>
+              <td class="duration" data-value="14346100">0.014</td>
+              <td class="duration" data-value="14346100">0.014</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.LoginSteps.validate_that_user_can_view_the_page(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="35605800">0.035</td>
+              <td class="duration" data-value="35605800">0.035</td>
+              <td class="duration" data-value="35605800">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.addTocarSteps.add_two_products_to_the_cart()</td>
+              <td>1</td>
+              <td class="duration" data-value="5515875500">5.515</td>
+              <td class="duration" data-value="5515875500">5.515</td>
+              <td class="duration" data-value="5515875500">5.515</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.addTocarSteps.clicks_on_the_checkout_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="244868500">0.244</td>
+              <td class="duration" data-value="244868500">0.244</td>
+              <td class="duration" data-value="244868500">0.244</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.addTocarSteps.clicks_on_the_continue_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="248826300">0.248</td>
+              <td class="duration" data-value="248826300">0.248</td>
+              <td class="duration" data-value="248826300">0.248</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.addTocarSteps.fill_in_the_information_section_with_first_name_last_name_and_zip_code()</td>
+              <td>1</td>
+              <td class="duration" data-value="114478600">0.114</td>
+              <td class="duration" data-value="114478600">0.114</td>
+              <td class="duration" data-value="114478600">0.114</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.addTocarSteps.go_to_cart_section()</td>
+              <td>1</td>
+              <td class="duration" data-value="253012700">0.253</td>
+              <td class="duration" data-value="253012700">0.253</td>
+              <td class="duration" data-value="253012700">0.253</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.addTocarSteps.the_user_has_already_logged_in()</td>
+              <td>1</td>
+              <td class="duration" data-value="429665400">0.429</td>
+              <td class="duration" data-value="429665400">0.429</td>
+              <td class="duration" data-value="429665400">0.429</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.sauce.steps.addTocarSteps.the_user_verifies_that_the_purchase_was_successful()</td>
+              <td>1</td>
+              <td class="duration" data-value="261351500">0.261</td>
+              <td class="duration" data-value="261351500">0.261</td>
+              <td class="duration" data-value="261351500">0.261</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>22</td>
+            <td>38</td>
+            <td class="duration">0.842</td>
+            <td class="duration">19.086</td>
+            <td class="duration">32.032</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
