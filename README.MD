@@ -113,8 +113,8 @@ Tests are executed using Maven commands from the project's root directory.
         ```
 
 ## Reports
-![Tags Report](https://raw.githubusercontent.com/jenmarchan/SauceDemo/refs/heads/main/docs/images/overview-tags.png?token=GHSAT0AAAAAADEQG2BGY42NXBIKEWXQVDNE2BTKIDA)
-![Features Report](https://raw.githubusercontent.com/jenmarchan/SauceDemo/refs/heads/main/docs/images/feature-report.png?token=GHSAT0AAAAAADEQG2BH257JNZMJXRKBMAFW2BTKHLA)
+![Tags Report](https://i.imgur.com/NzlJYM6.png)
+![Features Report](https://i.imgur.com/4dFFqTP.png)
 
 * **HTML Reports:** Detailed HTML reports are generated using the `maven-cucumber-reporting` plugin.
 * **Location:** Customer reports can be found in the `target/cucumber-html-reports/` directory after a test run (`mvn test`)
