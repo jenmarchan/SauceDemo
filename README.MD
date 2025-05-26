@@ -13,7 +13,7 @@ This project provides an automated testing framework built using Java, Selenium 
 * **JUnit:** Used for assertions within step definitions.
 * **Cucumber Reports:** Generates detailed HTML test execution reports.
 * **Cross-Browser Testing Ready:** Can be extended to run tests on different browsers (Chrome, Firefox, Edge, etc.).
-* **Tagging:** Uses Cucumber tags (`@Login`, `@ShoppingCart`) for selective test execution.
+* **Tagging:** Uses Cucumber tags (`@Login`, `@addToCart`) for selective test execution.
 
 ## Project Structure
 ```
