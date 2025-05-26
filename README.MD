@@ -61,12 +61,10 @@ The framework currently covers the following main test scenarios:
 1. **Login Functionality:**
     - Valid user login
     - Invalid credentials handling
-    - Locked out user detection
+    - Attempt to log in with missing information
 
 2. **Shopping Cart & Checkout Process:**
     - Adding products to cart
-    - Updating product quantities
-    - Removing products from cart
     - Completing checkout with shipping information
     - Order confirmation
 
