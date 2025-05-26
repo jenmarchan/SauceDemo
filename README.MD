@@ -105,7 +105,7 @@ Tests are executed using Maven commands from the project's root directory.
         mvn test -Dtest=LoginFunctionality
         ```
 
-    * **Shopping Cart Tests Only (`@ShoppingCart` tag):**
+    * **Shopping Cart Tests Only (`@addToCart` tag):**
         ```bash
         mvn test -Dtest=ToCart
         ```
